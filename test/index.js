@@ -39,3 +39,22 @@ test('animate', (t) => {
   t.same(node.childNodes.length, 1);
   t.same(node.childNodes[0].textContent, 'baz');
 });
+
+test('Keyframes events', (t) => {
+  const container = document.createElement('div');
+  const onStart = () => onStart.called = true;
+  const onEnd = () => onEnd.called = true;
+  render(
+    <Keyframes onStart={onStart} onEnd={onEnd}>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={100}>bar</Frame>
+    </Keyframes>,
+    container
+  );
+
+  t.ok(onStart.called);
+  clock.tick(100);
+  t.notOk(onEnd.called);
+  clock.tick(100);
+  t.ok(onEnd.called);
+});
