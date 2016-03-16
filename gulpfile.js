@@ -8,18 +8,7 @@ gulp.task('help', help);
 
 gulp.task('compile', function () {
   return gulp.src('lib/**/*.js')
-  .pipe(babel({
-    presets: [
-      'es2015',
-      'react'
-    ],
-    plugins: [
-      'syntax-async-functions',
-      'transform-async-to-generator',
-      'transform-class-properties',
-      'transform-runtime'
-    ]
-  }))
+  .pipe(babel())
   .pipe(gulp.dest('build/lib'));
 });
 
