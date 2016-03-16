@@ -16,7 +16,7 @@ gulp.task('compile', function () {
     plugins: [
       'syntax-async-functions',
       'transform-async-to-generator',
-      "transform-class-properties",
+      'transform-class-properties',
       'transform-runtime'
     ]
   }))

@@ -14,13 +14,13 @@ test.after((t) => {
   clock.uninstall();
 });
 
-test('return value', (t) => {
+test('animate', (t) => {
   const container = document.createElement('div');
   const component = render(
     <Keyframes>
-      <Frame>foo</Frame>
-      <Frame delay={100}>bar</Frame>
-      <Frame delay={200}>baz</Frame>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={200}>bar</Frame>
+      <Frame>baz</Frame>
     </Keyframes>,
     container
   );
