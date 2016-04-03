@@ -58,3 +58,17 @@ test('Keyframes events', (t) => {
   clock.tick(100);
   t.ok(onEnd.called);
 });
+
+test('set component', (t) => {
+  const container = document.createElement('div');
+  const component = render(
+    <Keyframes component="pre" className="woot">
+      <Frame>foo</Frame>
+      <Frame>bar</Frame>
+    </Keyframes>,
+    container
+  );
+  const node = findDOMNode(component);
+  t.same(node.tagName, 'PRE');
+  t.same(node.className, 'woot');
+});
