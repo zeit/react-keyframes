@@ -59,6 +59,22 @@ test('Keyframes events', (t) => {
   t.ok(onEnd.called);
 });
 
+test('Frame event', (t) => {
+  const container = document.createElement('div');
+  const onRender = () => onRender.called = true;
+  render(
+    <Keyframes>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={100} onRender={onRender}>bar</Frame>
+    </Keyframes>,
+    container
+  );
+
+  t.notOk(onRender.called);
+  clock.tick(100);
+  t.ok(onRender.called);
+});
+
 test('set component', (t) => {
   const container = document.createElement('div');
   const component = render(
