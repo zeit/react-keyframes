@@ -62,6 +62,7 @@ $ npm install react-keyframes --save
 
 - Use `import { Frame } from 'react-keyframes'` or `require('react-keyframes').Frame`.
 - The `duration` prop specifies the length of time that a frame should show (millisecond).
+- You have to put `Frame` in the order you want them animated.
 - Example:
 
   ```js
