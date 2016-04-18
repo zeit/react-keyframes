@@ -2,6 +2,8 @@
 
 A React component for creating frame-based animations.
 
+![Demo](https://cloud.githubusercontent.com/assets/775227/14613178/24789406-05d6-11e6-8411-6ee929ae3f3e.gif)
+
 ## Example
 
 The following example will render contents in `Frame` one at a time every 500 ms.
