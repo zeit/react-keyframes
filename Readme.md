@@ -10,7 +10,7 @@ The following example will render contents in `Frame` one at a time every 500 ms
 
 ```js
 import { render } from 'react-dom';
-import { KeyFrames, Frame } from 'react-keyframes';
+import { Keyframes, Frame } from 'react-keyframes';
 
 render(
   <Keyframes>
@@ -32,11 +32,11 @@ $ npm install react-keyframes --save
 
 ### API
 
-#### KeyFrames
-**`<KeyFrames { component = 'span', delay = 0, onStart, onEnd } />`**
+#### Keyframes
+**`<Keyframes { component = 'span', delay = 0, onStart, onEnd } />`**
 
-- Use `import { KeyFrames } from 'react-keyframes'` or `require('react-keyframes').KeyFrames`.
-- The `component` prop specifies what component `KeyFrames` renders as.
+- Use `import { Keyframes } from 'react-keyframes'` or `require('react-keyframes').Keyframes`.
+- The `component` prop specifies what component `Keyframes` renders as.
 - The `delay` prop specifies when the animation should start (millisecond).
 - The `onStart` function is invoked upon animation start
 - The `onEnd` function is invoked upon animation end
@@ -50,10 +50,10 @@ $ npm install react-keyframes --save
 
   class extends Component {
     render () {
-      return <KeyFrames component="pre" delay={300} className="animation-test">
+      return <Keyframes component="pre" delay={300} className="animation-test">
         <Frame>foo</Frame>
         <Frame>bar</Frame>
-      </KeyFrames>;
+      </Keyframes>;
     }
   }
   ```
@@ -73,10 +73,10 @@ $ npm install react-keyframes --save
 
   class extends Component {
     render () {
-      return <KeyFrames>
+      return <Keyframes>
         <Frame duration={100}>foo</Frame>
         <Frame duration={200}>bar</Frame>
-      </KeyFrames>;
+      </Keyframes>;
     }
   }
   ```
