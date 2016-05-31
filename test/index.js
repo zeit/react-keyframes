@@ -94,7 +94,7 @@ test('Infinite loop', (t) => {
   const onStart = () => onStart.called = true;
   const onEnd = () => onEnd.called = true;
   render(
-    <Keyframes onStart={onStart} onEnd={onEnd} loop={true}>
+    <Keyframes onStart={onStart} onEnd={onEnd} loop>
       <Frame duration={100}>foo</Frame>
       <Frame duration={100}>bar</Frame>
     </Keyframes>,
