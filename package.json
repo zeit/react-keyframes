@@ -9,7 +9,6 @@
   "devDependencies": {
     "ava": "0.13.0",
     "babel-eslint": "5.0.0",
-    "babel-plugin-syntax-async-functions": "6.5.0",
     "babel-plugin-transform-async-to-generator": "6.7.0",
     "babel-plugin-transform-class-properties": "6.6.0",
     "babel-plugin-transform-object-rest-spread": "6.6.5",
@@ -65,7 +64,6 @@
         "react"
       ],
       "plugins": [
-        "syntax-async-functions",
         "transform-async-to-generator",
         "transform-class-properties",
         "transform-object-rest-spread",
