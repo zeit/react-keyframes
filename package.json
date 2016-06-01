@@ -36,7 +36,8 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "test": "ava"
+    "test": "ava",
+    "prepublish": "gulp"
   },
   "babel": {
     "presets": [
