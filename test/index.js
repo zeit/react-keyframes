@@ -88,3 +88,43 @@ test('set component', (t) => {
   t.same(node.tagName, 'PRE');
   t.same(node.className, 'woot');
 });
+
+test('Infinite loop', (t) => {
+  const container = document.createElement('div');
+  const onStart = () => onStart.called = true;
+  const onEnd = () => onEnd.called = true;
+  render(
+    <Keyframes onStart={onStart} onEnd={onEnd} loop>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={100}>bar</Frame>
+    </Keyframes>,
+    container
+  );
+
+  t.ok(onStart.called);
+  clock.tick(100);
+  t.notOk(onEnd.called);
+  clock.tick(200);
+  t.notOk(onEnd.called);
+});
+
+test('Finite loop', (t) => {
+  const container = document.createElement('div');
+  const onStart = () => onStart.called = true;
+  const onEnd = () => onEnd.called = true;
+  render(
+    <Keyframes onStart={onStart} onEnd={onEnd} loop={3}>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={100}>bar</Frame>
+    </Keyframes>,
+    container
+  );
+
+  t.ok(onStart.called);
+  clock.tick(100);
+  t.notOk(onEnd.called);
+  clock.tick(200);
+  t.notOk(onEnd.called);
+  clock.tick(300);
+  t.ok(onEnd.called);
+});
