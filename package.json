@@ -6,6 +6,9 @@
   "files": [
     "build"
   ],
+  "greenkeeper": {
+    "emails": false
+  },
   "devDependencies": {
     "ava": "0.15.2",
     "babel-eslint": "6.1.2",
