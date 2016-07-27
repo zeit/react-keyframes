@@ -1,4 +1,4 @@
-# React Keyframes
+# React Keyframes [![Build Status](https://travis-ci.org/zeit/react-keyframes.svg?branch=master)](https://travis-ci.org/zeit/react-keyframes)
 
 A React component for creating frame-based animations.
 
