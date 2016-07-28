@@ -33,7 +33,7 @@
     "gulp-eslint": "3.0.1",
     "gulp-task-listing": "1.0.1",
     "jsdom": "9.4.1",
-    "lolex": "1.5.0",
+    "lolex": "1.5.1",
     "react": "15.2.1",
     "react-dom": "15.2.1"
   },
