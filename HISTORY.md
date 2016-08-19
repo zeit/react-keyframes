@@ -1,3 +1,12 @@
+
+0.2.2 / 2016-08-19
+==================
+
+  * setup Travis CI [@leo]
+  * setup Greenkeeper [@leo]
+  * bump dependencies
+  * don't pass unnecessary props to components
+
 0.2.1 / 2016-06-01
 ==================
 
