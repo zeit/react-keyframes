@@ -42,8 +42,12 @@ test('animate', (t) => {
 
 test('Keyframes events', (t) => {
   const container = document.createElement('div');
-  const onStart = () => onStart.called = true;
-  const onEnd = () => onEnd.called = true;
+  const onStart = () => {
+    onStart.called = true;
+  };
+  const onEnd = () => {
+    onEnd.called = true;
+  };
   render(
     <Keyframes onStart={onStart} onEnd={onEnd}>
       <Frame duration={100}>foo</Frame>
@@ -61,7 +65,9 @@ test('Keyframes events', (t) => {
 
 test('Frame event', (t) => {
   const container = document.createElement('div');
-  const onRender = () => onRender.called = true;
+  const onRender = () => {
+    onRender.called = true;
+  };
   render(
     <Keyframes>
       <Frame duration={100}>foo</Frame>
@@ -91,8 +97,12 @@ test('set component', (t) => {
 
 test('Infinite loop', (t) => {
   const container = document.createElement('div');
-  const onStart = () => onStart.called = true;
-  const onEnd = () => onEnd.called = true;
+  const onStart = () => {
+    onStart.called = true;
+  };
+  const onEnd = () => {
+    onEnd.called = true;
+  };
   render(
     <Keyframes onStart={onStart} onEnd={onEnd} loop>
       <Frame duration={100}>foo</Frame>
@@ -110,8 +120,12 @@ test('Infinite loop', (t) => {
 
 test('Finite loop', (t) => {
   const container = document.createElement('div');
-  const onStart = () => onStart.called = true;
-  const onEnd = () => onEnd.called = true;
+  const onStart = () => {
+    onStart.called = true;
+  };
+  const onEnd = () => {
+    onEnd.called = true;
+  };
   render(
     <Keyframes onStart={onStart} onEnd={onEnd} loop={3}>
       <Frame duration={100}>foo</Frame>
