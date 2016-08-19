@@ -26,18 +26,18 @@ test('animate', (t) => {
   );
   const node = findDOMNode(component);
 
-  t.same(node.childNodes.length, 1);
-  t.same(node.childNodes[0].textContent, 'foo');
+  t.deepEqual(node.childNodes.length, 1);
+  t.deepEqual(node.childNodes[0].textContent, 'foo');
 
   clock.tick(100);
 
-  t.same(node.childNodes.length, 1);
-  t.same(node.childNodes[0].textContent, 'bar');
+  t.deepEqual(node.childNodes.length, 1);
+  t.deepEqual(node.childNodes[0].textContent, 'bar');
 
   clock.tick(200);
 
-  t.same(node.childNodes.length, 1);
-  t.same(node.childNodes[0].textContent, 'baz');
+  t.deepEqual(node.childNodes.length, 1);
+  t.deepEqual(node.childNodes[0].textContent, 'baz');
 });
 
 test('Keyframes events', (t) => {
@@ -52,11 +52,11 @@ test('Keyframes events', (t) => {
     container
   );
 
-  t.ok(onStart.called);
+  t.truthy(onStart.called);
   clock.tick(100);
-  t.notOk(onEnd.called);
+  t.falsy(onEnd.called);
   clock.tick(100);
-  t.ok(onEnd.called);
+  t.truthy(onEnd.called);
 });
 
 test('Frame event', (t) => {
@@ -70,9 +70,9 @@ test('Frame event', (t) => {
     container
   );
 
-  t.notOk(onRender.called);
+  t.falsy(onRender.called);
   clock.tick(100);
-  t.ok(onRender.called);
+  t.truthy(onRender.called);
 });
 
 test('set component', (t) => {
@@ -85,8 +85,8 @@ test('set component', (t) => {
     container
   );
   const node = findDOMNode(component);
-  t.same(node.tagName, 'PRE');
-  t.same(node.className, 'woot');
+  t.deepEqual(node.tagName, 'PRE');
+  t.deepEqual(node.className, 'woot');
 });
 
 test('Infinite loop', (t) => {
@@ -101,11 +101,11 @@ test('Infinite loop', (t) => {
     container
   );
 
-  t.ok(onStart.called);
+  t.truthy(onStart.called);
   clock.tick(100);
-  t.notOk(onEnd.called);
+  t.falsy(onEnd.called);
   clock.tick(200);
-  t.notOk(onEnd.called);
+  t.falsy(onEnd.called);
 });
 
 test('Finite loop', (t) => {
@@ -120,11 +120,11 @@ test('Finite loop', (t) => {
     container
   );
 
-  t.ok(onStart.called);
+  t.truthy(onStart.called);
   clock.tick(100);
-  t.notOk(onEnd.called);
+  t.falsy(onEnd.called);
   clock.tick(200);
-  t.notOk(onEnd.called);
+  t.falsy(onEnd.called);
   clock.tick(300);
-  t.ok(onEnd.called);
+  t.truthy(onEnd.called);
 });
