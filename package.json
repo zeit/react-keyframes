@@ -24,7 +24,7 @@
     "babel-runtime": "6.11.6",
     "del": "2.2.2",
     "eslint-config-standard": "6.0.1",
-    "eslint-config-standard-jsx": "3.0.1",
+    "eslint-config-standard-jsx": "3.2.0",
     "eslint-config-standard-react": "4.0.2",
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-react": "6.2.2",
