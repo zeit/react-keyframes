@@ -3,9 +3,9 @@
   "version": "0.2.2",
   "description": "Create frame-based animations in React",
   "license": "MIT",
-  "main": "./build/lib",
+  "main": "./dist/index.js",
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
     "gulp": "gulp",
