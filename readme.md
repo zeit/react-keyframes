@@ -88,7 +88,7 @@ $ npm install --save react-keyframes
 ## Contributing
 
 - Run `npm run build` to transpile the source code
-- Before submitting a PR, please run npm test`
+- Before submitting a PR, please run `npm test`
 - Please [be welcoming](http://contributor-covenant.org/)
 
 ## Author
