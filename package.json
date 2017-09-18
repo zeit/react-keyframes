@@ -1,14 +1,12 @@
 {
   "name": "react-keyframes",
   "version": "0.2.2",
-  "description": "",
+  "description": "Create frame-based animations in React",
+  "license": "MIT",
   "main": "./build/lib",
   "files": [
     "build"
   ],
-  "greenkeeper": {
-    "emails": false
-  },
   "devDependencies": {
     "ava": "0.22.0",
     "babel-eslint": "^8.0.0",
