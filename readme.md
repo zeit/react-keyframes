@@ -25,17 +25,17 @@ render(
 );
 ```
 
-## Documentation
+## Usage
 
-### Installation
+Firstly, install the package:
 
 ```js
-$ npm install react-keyframes --save
+$ npm install --save react-keyframes
 ```
 
-### API
+## API
 
-#### Keyframes
+### Keyframes
 **`<Keyframes { component = 'span', delay = 0, loop = 1, onStart, onEnd } />`**
 
 - Use `import { Keyframes } from 'react-keyframes'` or `require('react-keyframes').Keyframes`.
@@ -62,7 +62,7 @@ $ npm install react-keyframes --save
   }
   ```
 
-#### Frame
+### Frame
 
 **`<Frame { duration = 0 } />`**
 
@@ -85,12 +85,11 @@ $ npm install react-keyframes --save
   }
   ```
 
-### Contributing
+## Contributing
 
-- Run `gulp help`  to see available tasks.
-- Before submitting a PR, please run `gulp lint` and `npm test`.
-- We use [`standard`](https://github.com/feross/standard) + semicolons.
-- Please [be welcoming](http://contributor-covenant.org/).
+- Run `npm run build` to transpile the source code
+- Before submitting a PR, please run npm test`
+- Please [be welcoming](http://contributor-covenant.org/)
 
 ## Author
 
