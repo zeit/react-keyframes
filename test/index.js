@@ -1,8 +1,11 @@
+// Packages
 import test from 'ava'
 import lolex from 'lolex'
 import React from 'react'
 import {render, findDOMNode} from 'react-dom'
-import {Keyframes, Frame} from '../lib'
+
+// Utilities
+import {Keyframes, Frame} from '../src'
 
 let clock
 
