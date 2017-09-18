@@ -3,11 +3,12 @@ const gulp = require('gulp')
 const del = require('del')
 const babel = require('gulp-babel')
 
-gulp.task('compile', () => {
-  return gulp.src('src/**/*.js')
+const path = 'src/**/*.js'
+
+gulp.task('default', () => {
+  return gulp.src(path)
   .pipe(babel())
   .pipe(gulp.dest('dist'))
 })
 
 gulp.task('clean', () => del(['dist']))
-gulp.task('default', ['compile'])

@@ -8,7 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "gulp": "gulp",
+    "build": "gulp",
+    "prepublish": "npm run build",
     "test": "xo && ava"
   },
   "babel": {
@@ -53,7 +54,11 @@
     "envs": [
       "browser",
       "jsx"
-    ]
+    ],
+    "rules": {
+      "react/require-default-props": 0,
+      "react/no-unused-prop-types": 0
+    }
   },
   "devDependencies": {
     "ava": "0.22.0",

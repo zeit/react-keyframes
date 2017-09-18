@@ -1,5 +1,8 @@
+// Packages
 import React from 'react'
 import PropTypes from 'prop-types'
+
+// Utilities
 import Frame from './frame'
 
 const noop = () => {}
@@ -10,9 +13,9 @@ export default class Keyframes extends React.Component {
     component: PropTypes.any, // eslint-disable-line react/no-unused-prop-types
     delay: PropTypes.number,
     loop: PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
-      React.PropTypes.bool
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool
     ]),
     onStart: PropTypes.func,
     onEnd: PropTypes.func
@@ -75,7 +78,7 @@ export default class Keyframes extends React.Component {
 
     const props = {}
     Object.keys(this.props).forEach(k => {
-      // don't pass props which exist only on Keyframes
+      // Don't pass props which exist only on Keyframes
       if (Keyframes.propTypes[k] && !Frame.propTypes[k]) {
         return
       }
