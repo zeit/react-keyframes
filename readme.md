@@ -92,8 +92,6 @@ $ npm install react-keyframes --save
 - We use [`standard`](https://github.com/feross/standard) + semicolons.
 - Please [be welcoming](http://contributor-covenant.org/).
 
-## Credits
+## Author
 
-- Copyright © 2016 Zeit, Inc and project authors.
-- Licensed under MIT.
-- ▲
+Naoyuki Kanezawa ([@nkzawa](https://twitter.com/nkzawa)) - [▲ZEIT](https://zeit.co)
