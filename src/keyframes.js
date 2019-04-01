@@ -71,8 +71,8 @@ export default class Keyframes extends React.Component {
   }
 
   render() {
-    const frame = this.getFrame()
-    if (!frame) {
+    const CurrentFrame = this.getFrame()
+    if (!CurrentFrame) {
       return null
     }
 
@@ -86,7 +86,7 @@ export default class Keyframes extends React.Component {
       props[k] = this.props[k]
     })
 
-    return React.cloneElement(frame, {...props, ...frame.props})
+    return <CurrentFrame {...props} {...CurrentFrame.props} />
   }
 
   requestNextFrame() {
