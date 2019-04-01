@@ -1,6 +1,6 @@
 {
   "name": "react-keyframes",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Create frame-based animations in React",
   "license": "MIT",
   "main": "./dist/index.js",
