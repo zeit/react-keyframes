@@ -86,7 +86,7 @@ export default class Keyframes extends React.Component {
       props[k] = this.props[k]
     })
 
-    return <CurrentFrame {...props} {...CurrentFrame.props} />
+    return <CurrentFrame.type {...props} {...CurrentFrame.props}/>
   }
 
   requestNextFrame() {
