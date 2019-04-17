@@ -34,9 +34,6 @@ export default class Frame extends React.Component {
       props[k] = this.props[k]
     })
 
-    if (component === 'Fragment') {
-      return React.createElement(React.Fragment, {}, this.props.children)
-    }
     return React.createElement(component, props, this.props.children)
   }
 }
