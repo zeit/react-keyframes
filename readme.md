@@ -39,7 +39,11 @@ $ npm install --save react-keyframes
 **`<Keyframes { component = 'span', delay = 0, loop = 1, onStart, onEnd } />`**
 
 - Use `import { Keyframes } from 'react-keyframes'` or `require('react-keyframes').Keyframes`.
-- The `component` prop specifies what component `Keyframes` renders as.
+- The `component` prop specifies what component `Keyframes` renders as. You can pass the following:
+  - a React Component (i.e. `<Keyframes component={myComponent} />`)
+  - a React Fragment (i.e. `<Keyframes component={React.Fragment} />`)
+  - an HTML tag represented as a string (i.e. `<Keyframes component='div' />`)
+  - If nothing is passed, it defaults to "span"
 - The `delay` prop specifies when the animation should start (millisecond).
 - The `loop` prop specifies the number of times an animation cycle should be played. Set `true` to repeat forever.
 - The `onStart` function is invoked upon animation start
