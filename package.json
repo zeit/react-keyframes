@@ -1,4 +1,7 @@
 {
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "jest",
     "prepublish": "lerna run prepublish",
