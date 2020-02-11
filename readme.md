@@ -12,17 +12,19 @@ A React component for creating frame-based animations.
 The following example will render contents in `Frame` one at a time every 500 ms.
 
 ```js
-import { render } from 'react-dom';
-import { Keyframes, Frame } from 'react-keyframes';
+import { Keyframes, Frame } from "react-keyframes";
 
-render(
-  <Keyframes>
-    <Frame duration={500}>This</Frame>
-    <Frame duration={500}>This is</Frame>
-    <Frame duration={500}>This is <em>animated</em>.</Frame>
-  </Keyframes>,
-  document.getElementById('container')
-);
+function MyComponent() {
+  return (
+    <Keyframes>
+      <Frame duration={500}>This</Frame>
+      <Frame duration={500}>This is</Frame>
+      <Frame duration={500}>
+        This is <em>animated</em>.
+      </Frame>
+    </Keyframes>
+  );
+}
 ```
 
 ## Usage
@@ -36,64 +38,60 @@ $ npm install --save react-keyframes
 ## API
 
 ### Keyframes
-**`<Keyframes { component = 'span', delay = 0, loop = 1, onStart, onEnd } />`**
 
-- Use `import { Keyframes } from 'react-keyframes'` or `require('react-keyframes').Keyframes`.
+**`<Keyframes { component = 'span' } />`**
+
+- Use `import { Keyframes } from 'react-keyframes'`
 - The `component` prop specifies what component `Keyframes` renders as. You can pass the following:
   - a React Component (i.e. `<Keyframes component={myComponent} />`)
   - a React Fragment (i.e. `<Keyframes component={React.Fragment} />`)
   - an HTML tag represented as a string (i.e. `<Keyframes component='div' />`)
   - If nothing is passed, it defaults to "span"
-- The `delay` prop specifies when the animation should start (millisecond).
-- The `loop` prop specifies the number of times an animation cycle should be played. Set `true` to repeat forever.
-- The `onStart` function is invoked upon animation start
-- The `onEnd` function is invoked upon animation end
 - Any additional, user-defined properties will become properties of the rendered component.
 - It must have only `Frame` as children.
 - Example:
 
-  ```js
-  import { Component } from 'react';
-  import { Keyframes, Frame } from 'react-keyframes';
+```js
+import { Component } from 'react';
+import { Keyframes, Frame } from 'react-keyframes';
 
-  class extends Component {
-    render () {
-      return <Keyframes component="pre" delay={300} className="animation-test">
-        <Frame>foo</Frame>
-        <Frame>bar</Frame>
-      </Keyframes>;
-    }
+class extends Component {
+  render () {
+    return <Keyframes component="pre" delay={300} className="animation-test">
+      <Frame>foo</Frame>
+      <Frame>bar</Frame>
+    </Keyframes>;
   }
-  ```
+}
+```
 
 ### Frame
 
-**`<Frame { duration = 0, onRender } />`**
+**`<Frame { duration = 0 } />`**
 
-- Use `import { Frame } from 'react-keyframes'` or `require('react-keyframes').Frame`.
+- Use `import { Frame } from 'react-keyframes'`
 - The `duration` prop specifies the length of time that a frame should show (millisecond).
-- The `onRender` function is invoked upon rendering of this frame
 - You have to put `Frame` in the order you want them animated.
 - Example:
 
-  ```js
-  import { Component } from 'react';
-  import { Keyframes, Frame } from 'react-keyframes';
+```js
+import { Component } from 'react';
+import { Keyframes, Frame } from 'react-keyframes';
 
-  class extends Component {
-    render () {
-      return <Keyframes>
-        <Frame duration={100}>foo</Frame>
-        <Frame duration={200}>bar</Frame>
-      </Keyframes>;
-    }
+class extends Component {
+  render () {
+    return <Keyframes>
+      <Frame duration={100}>foo</Frame>
+      <Frame duration={200}>bar</Frame>
+    </Keyframes>;
   }
-  ```
+}
+```
 
 ## Contributing
 
 - Run `npm run build` to transpile the source code
-- Before submitting a PR, please run `npm test`
+- Before submitting a PR, please run `npm run test`
 - Please [be welcoming](http://contributor-covenant.org/)
 
 ## Author
