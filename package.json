@@ -1,18 +1,10 @@
 {
-  "name": "react-keyframes",
-  "version": "0.2.3",
-  "description": "Create frame-based animations in React",
-  "license": "MIT",
-  "source": "src/index.ts",
-  "main": "./dist/index.js",
-  "module": "dist/index.mjs",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "prettier src/index.ts readme.md --write && rm -rf dist && microbundle --external react,prop-types --format es,cjs",
     "test": "jest",
-    "prepublish": "npm run build"
+    "prepublish": "lerna run prepublish",
+    "prettier": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss}\"",
+    "publish-canary": "lerna version prerelease --preid canary --force-publish && release --pre",
+    "publish-stable": "lerna version --force-publish"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.1.1",
@@ -20,7 +12,8 @@
     "@types/jest": "25.1.2",
     "@types/react": "16.9.19",
     "jest": "25.1.0",
-    "microbundle": "0.11.0",
+    "lerna": "3.20.2",
+    "pre-commit": "1.2.2",
     "prettier": "1.19.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",

@@ -1,0 +1,19 @@
+{
+  "name": "react-keyframes",
+  "version": "1.0.0-canary.0",
+  "description": "Create frame-based animations in React",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "./dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && microbundle --external react,prop-types --format es,cjs",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "microbundle": "0.11.0"
+  }
+}

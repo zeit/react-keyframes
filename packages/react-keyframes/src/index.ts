@@ -4,6 +4,7 @@ import React from "react";
 type Props = {
   children: any;
   component?: any;
+  [frameProp: string]: any;
 };
 
 type State = {
